@@ -18,7 +18,7 @@ Offensive plays & yardage:
 class Cards:
     class Offense:
         # Run plays
-        def run_play(defense):
+        def run_play(defense, yards):
             match defense:
                 case 0:
                     print("Full Gain")
@@ -35,7 +35,7 @@ class Cards:
                 case 6:
                     print("-10 Yards, Replay down")
 
-        def draw_play(defense):
+        def draw_play(defense, yards):
             match defense:
                 case 0:
                     print("Full Gain")
@@ -52,7 +52,7 @@ class Cards:
                 case 6:
                     print("-5 Yards, Replay down")
         # Passing plays
-        def pass_play(defense):
+        def pass_play(defense, yards):
             match defense:
                 case 0:
                     print("No Gain")
@@ -69,7 +69,7 @@ class Cards:
                 case 6:
                     print("-10 Yards, Lose down")
 
-        def play_action(defense):
+        def play_action(defense, yards):
             match defense:
                 case 0:
                     print("Half Gain")
@@ -86,9 +86,7 @@ class Cards:
                 case 6:
                     print("Full Gain")
 
-    offensive_cards=dir(Offense)
     
-
     class Defense:
         defensive_calls = { 0: "Pass Defense", 
                             1: "Run Defense", 
@@ -97,3 +95,17 @@ class Cards:
                             4: "All Out Blitz",
                             5: "Zone Blitz",
                             6: "Penalty" }
+
+    def populate_deck():
+        offensive_deck=[]
+        offensive_cards=dir(Cards.Offense)
+        offensive_cards=[x for x in offensive_cards if x[0]!="_"]
+
+        # for x in offensive_cards:
+        #     for j in range(20):
+        #         offensive_deck.append(x)
+        # return offensive_deck
+
+
+# print(Cards.populate_deck())
+# print(Cards.Offense.run_play(1, 20))]
