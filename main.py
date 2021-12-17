@@ -6,7 +6,7 @@ import keyboard
 home = 0
 away = 0
 
-ball_spot: int
+ball_spot = 0
 first_down = ball_spot + 10
 
 # each play, increment a var and compare to cards_per_quarter variable 
