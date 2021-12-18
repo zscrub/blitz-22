@@ -1,0 +1,63 @@
+{
+    "offensive_plays": [
+            ["10 Yard run", "run_play", 10],
+            ["15 Yard run", "run_play", 15],
+            ["20 Yard run", "run_play", 20],
+            ["25 Yard run", "run_play", 25],
+            
+            ["10 Yard draw", "draw_play", 10],
+            ["15 Yard draw", "draw_play", 15],
+            ["20 Yard draw", "draw_play", 20],
+            
+            ["10 Yard pass", "pass_play", 10],
+            ["20 Yard pass", "pass_play", 20],
+            ["30 Yard pass", "pass_play", 30],
+            ["40 Yard pass", "pass_play", 40],
+            ["50 Yard pass", "pass_play", 50],
+            
+            ["10 Yard Play-action", "play_action", 10],
+            ["30 Yard Play-action", "play_action", 30],
+            ["50 Yard Play-action", "play_action", 50]
+        ],
+        
+        "offensive_deck": [
+                0, 0, 0, 0, 0, 0,
+                1, 1, 1, 1, 1, 1,
+                2, 2, 2,
+                3, 3,
+    
+                4, 4, 4, 4, 4, 4, 4, 4,
+                5, 5, 5, 5, 5,
+                6, 6,
+    
+                7, 7, 7, 7, 7,
+                8, 8, 8, 8,
+                9, 9, 9,
+                10, 10,
+                11,
+    
+                12, 12, 12, 12, 12, 12, 12, 12,
+                13, 13, 13,
+                14, 14
+            ],
+
+        "defensive_plays": [
+                "Pass Defense", 
+                "Run Defense", 
+                "Fumble", 
+                "Interception", 
+                "All Out Blitz",
+                "Zone Blitz",
+                "Penalty" 
+            ],
+
+        "defensive_deck": [
+                0, 0, 0, 0, 0, 0, 0, 0, 0,
+                1, 1, 1, 1, 1, 1, 1, 1, 1,
+                2, 2, 2, 2, 2, 2, 2, 2, 
+                3, 3, 3, 3, 3, 3, 3, 3, 
+                4, 4, 4, 4, 4, 4, 4, 4, 4,
+                5, 5, 5, 5, 5, 5, 5, 5, 5,
+                6, 6, 6, 6, 6, 6, 6, 6
+            ]
+}
