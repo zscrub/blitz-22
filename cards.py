@@ -1,4 +1,5 @@
 import json
+from on_field import Field_data
 from random import shuffle
 # methods of plays with the defensive play as an argument, e machethod calculates the result based on the input
 # array/dictionary of plays for user to call, and to be referenced for hand array
@@ -76,8 +77,58 @@ class Cards:
                     print("-5 yards")
                 case 6:
                     print("Full Gain")
-        
-        # function to get Offensive or Defensive deck/plays, takes 1 parameter as a string "offensive", or "defensive"
+
+                    
+        # Who places card is Offense
+        # Who places card is Defense
+
+        #special teams plays
+        def kick_off(spot, player='Zack/New England'):
+            match spot:
+                case 0:
+                    print("55 yard kick")
+                    Field_data.spot_ball(Field_data, 10)
+                case 1:
+                    print("45 yard kick")
+                    Field_data.spot_ball(Field_data, 20)
+                case 2:
+                    print("35 yard kick")
+                    Field_data.spot_ball(Field_data, 30)
+                case 3:
+                    print("25 yard kick")
+                    Field_data.spot_ball(Field_data, 40)
+                case 4:
+                    print("15 yard kick")
+                    Field_data.spot_ball(Field_data, 50)
+                case 5:
+                    print(f"Recieving Team Touchdown! {player.name} + 6!")
+                    # for demonstration purposes:
+                    Field_data.touchdown(player)
+
+        def punt_play(yards):
+            match yards:
+                case 0:
+                    print("30 yard punt")
+                    Field_data.move_ball(Field_data, 30)
+                case 1:
+                    print("35 yard punt")
+                    Field_data.move_ball(Field_data, 30)
+                case 2:
+                    print("40 yard punt")
+                    Field_data.move_ball(Field_data, 40)
+                case 3: 
+                    print("45 yard punt")
+                    Field_data.move_ball(Field_data, 45)
+                case 4:
+                    print("50 yard punt")
+                    Field_data.move_ball(Field_data, 50)
+                case 5:
+                    print("Recieving Team Touchdown!")
+                    Field_data.touchdown(team_or_player="Zack/New England")
+
+
+        # function to get Offensive, Defensive, Special teams deck/plays 
+        # both 1 parameter as a string "offensive", "defensive", "specialkickoff", "specialpunt"
         def get_deck(side) -> list:
             with open('decks.json', 'r') as f:
                 decks = json.load(f)
@@ -97,8 +148,12 @@ class Cards:
         def set_decks() -> list:
             offensive_deck = Cards.get_deck("offensive")
             defensive_deck = Cards.get_deck("defensive")
+            kickoff_deck = Cards.get_deck("specialkick")
+            punt_deck = Cards.get_deck("specialpunt")
             shuffle(offensive_deck)
             shuffle(defensive_deck)
-            return offensive_deck, defensive_deck
+            shuffle(kickoff_deck)
+            shuffle(punt_deck)
+            return offensive_deck, defensive_deck, kickoff_deck, punt_deck
 
 # Cards.get_plays("offensive") : Returns array of smaller lists, [str, str(function), int]
