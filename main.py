@@ -30,29 +30,10 @@ player2 = Player("Bubbles")
 def main():
     while True:
         sleep(0.2)
-        if keyboard.is_pressed('ESC'):
-            break
-        
-        if keyboard.is_pressed('l'):
-            offensive_deck, defensive_deck = Cards.set_decks()
-            print(f'{offensive_deck}\n{defensive_deck}')
-            pass
 
-        if keyboard.is_pressed('k'):
-            print(f'{offensive_deck}')
-            pass
+
 
         # draw offensive card to player1 hand
         if keyboard.is_pressed('j'):
-            player1.draw_offensive_card(offensive_deck)
-            print(player1.hand)
-            pass
-        
-        # draw offensive card to player2 hand
-        if keyboard.is_pressed('h'):
-            player2.draw_offensive_card(offensive_deck)
-            print(player2.hand)
-            pass
-
 if __name__=="__main__":
     main()

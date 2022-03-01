@@ -9,7 +9,7 @@ class Player:
         self.hand = []
         self.score = 0
 
-    def team(self, team: str):
+    def set_team(self, team: str):
         self.team = team
 
     def draw_offensive_card(self, offensive_deck):

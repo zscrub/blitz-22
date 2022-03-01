@@ -156,4 +156,4 @@ class Cards:
             shuffle(punt_deck)
             return offensive_deck, defensive_deck, kickoff_deck, punt_deck
 
-# Cards.get_plays("offensive") : Returns array of smaller lists, [str, str(function), int]
+print(Cards.get_plays("defensive")) # : Returns array of smaller lists, [str, str(function), int]
