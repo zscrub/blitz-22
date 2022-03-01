@@ -28,12 +28,10 @@ player2 = Player("Bubbles")
 
 # start game
 def main():
-    while True:
-        sleep(0.2)
+    # while True:
+    
+    ...
 
 
-
-        # draw offensive card to player1 hand
-        if keyboard.is_pressed('j'):
 if __name__=="__main__":
     main()
